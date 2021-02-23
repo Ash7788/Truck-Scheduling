@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:action="@{/}" th:object="${User}" method="post">
+    <table>
+        <tr>
+            <td>Source_city:</td>
+            <td><input type="text" th:field="*{Source_City}" /></td>
+            <td th:if="${#fields.hasErrors('Source_city')}" th:errors="*{Source_City}"></td>
+        </tr>
+        <tr>
+            <td>Destination_City:</td>
+            <td><input type="text" th:field="*{Destination_City}" /></td>
+            <td th:if="${#fields.hasErrors('Destination_city')}" th:errors="*{Destination_city}"></td>
+        </tr>
+        <tr>
+            <td>Pickup Time:</td>
+            <td><input type="text" th:field="*{timestamp}" /></td>
+            <td th:if="${#fields.hasErrors('timestamp')}" th:errors="*{timestamp}"></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+<html>

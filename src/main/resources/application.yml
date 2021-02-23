@@ -1,0 +1,10 @@
+Spring:
+  datasource:
+    DriverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rivigo
+    username: root
+    Password: Pantomath
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: false
+    show-sql: true
